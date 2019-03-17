@@ -62,6 +62,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-basicclientjs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/17/basicclientjs/" class="article-date">
+  <time datetime="2019-03-17T08:07:29.000Z" itemprop="datePublished">2019-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/17/basicclientjs/">basicclientjs</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>概述部分 客户端JavaScript</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;p&gt;This is a paragraph of HTML&lt;/p&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		function moveon()&#123;</span><br><span class="line">			//通过弹出一个对话框来询问用户一个问题</span><br><span class="line">			var answer = confirm(&quot;准备好了吗？&quot;);</span><br><span class="line">			//单击“确定”按钮，浏览器会加载一个新页面</span><br><span class="line">			if (answer) window.location = &quot;http://taobao.com&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		// 在1分钟（6万毫秒）后执行定义的这个函数</span><br><span class="line">		setTimeout(moveon,60000);</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	//在document中的一个指定的区域输出调试信息，如果document不存在这样的一个区域，则创建一个</span><br><span class="line">		function debug(msg)&#123;</span><br><span class="line">			//通过查看HTML元素id属性来查找文档的调试部分</span><br><span class="line">			var log = document.getElementById(&quot;debuglog&quot;);</span><br><span class="line"></span><br><span class="line">			//如果这个元素不存在，则创建一个</span><br><span class="line">			if(!log)&#123;</span><br><span class="line">				log = document.createElement(&quot;div&quot;);	//创建一个新的&lt;div&gt;元素</span><br><span class="line">				log.id = &quot;debuglog&quot;;		//给这个元素的HTML id赋值</span><br><span class="line">				log.innerHTML = &quot;&lt;h1&gt;Debug Log&lt;/h1&gt;&quot;;	//定义初始化内容</span><br><span class="line">				document.body.appendChild(log);			//将其添加到文档的末尾</span><br><span class="line">			&#125;</span><br><span class="line">			//将消息包装在&lt;pre&gt;中，并添加至log中</span><br><span class="line">			var pre = document.createElement(&quot;pre&quot;);	//创建&lt;pre&gt;标签</span><br><span class="line">			var text = document.createTextNode(msg);	//将msg包装在一个文本节点中</span><br><span class="line">			pre.appendChild(text);				//将文本添加至&lt;pre&gt;</span><br><span class="line">			log.appendChild(pre);				//将&lt;pre&gt;添加至log</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		function hide(e,reflow)&#123;				//通过JS操纵样式隐藏元素e</span><br><span class="line">			if(reflow)&#123;						//如果第二个参数是true</span><br><span class="line">				e.style.display = &quot;none&quot;	//隐藏这个元素，其所占的空间也随之消失</span><br><span class="line">			&#125;</span><br><span class="line">			else&#123;							//否则</span><br><span class="line">				e.style.visibility = &quot;hidden&quot;;		//将e隐藏，但是保留其所占的空间</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		function highlight(e)&#123;			//通过设置CSS类来高亮显示e</span><br><span class="line">			//简单地定义或追加HTML类属性</span><br><span class="line">			//这里假设CSS样式表中已经有“hilite”类的定义</span><br><span class="line">			if(!e.className) e.className = &quot;hilite&quot;;</span><br><span class="line">			else e.className += &quot;hilite&quot;;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		function debug(msg)&#123;</span><br><span class="line">			var log = $(&quot;#debuglog&quot;);			//找到要显示msg的元素</span><br><span class="line">			if(log.length == 0)&#123;			//如果不存在则创建之</span><br><span class="line">				log = $(&quot;&lt;div id=&apos;debuglog&apos;&gt;&lt;h1&gt;Debug Log&lt;/h1&gt;&lt;/div&gt;&quot;);</span><br><span class="line">				log.appendTo(document.body);	//并将其追加到body里</span><br><span class="line">			&#125;</span><br><span class="line">			log.append($(&quot;&lt;pre/&gt;&quot;).text(msg));		//将msg包装在&lt;pre&gt;中，再追加到log里</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/17/basicclientjs/" data-id="cjtcn40ne00002cuttqrteqdd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-basicjscore" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/17/basicjscore/" class="article-date">
@@ -89,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/17/basicjscore/" data-id="cjtbqs1lj0000okutlerdwrts" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/17/basicjscore/" data-id="cjtcn40pc00032cuto0daaiuk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/16/newpapername/" data-id="cjtbqs1m00002okut2paxj9bn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/16/newpapername/" data-id="cjtcn40ox00022cut2zalyrm9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/16/hello-world/" data-id="cjtbqs1lv0001okutpjs78gdz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/16/hello-world/" data-id="cjtcn40os00012cutuqb7sb5y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,6 +248,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/03/17/basicclientjs/">basicclientjs</a>
+          </li>
         
           <li>
             <a href="/2019/03/17/basicjscore/">basicjscore</a>
