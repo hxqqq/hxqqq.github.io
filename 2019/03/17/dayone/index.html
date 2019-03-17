@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符(\u0020)，还可以识">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T14:28:42.523Z">
+<meta property="og:updated_time" content="2019-03-17T14:51:51.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dayone">
 <meta name="twitter:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符(\u0020)，还可以识">
@@ -97,12 +97,18 @@
 </code></pre><h3 id="直接量"><a href="#直接量" class="headerlink" title="直接量"></a>直接量</h3><pre><code>所谓直接量就是程序中直接使用的数据值。
 下面列出的都是直接量：
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">12		//数字</span><br><span class="line">1.2		//小数</span><br><span class="line">&quot;hello world&quot;	//字符串文本</span><br><span class="line">&apos;Hi&apos;		//另一个字符串</span><br><span class="line">true		//布尔值</span><br><span class="line">false		//另一个布尔值</span><br><span class="line">/javascript/gi		//正则表达式直接量（用作模式匹配)</span><br><span class="line">null		//空</span><br></pre></td></tr></table></figure>
-<p>#####更多复杂的表达方式可以写成数组或对象直接量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; x:1,y:2 &#125;		//对象</span><br><span class="line">&#123; 1,2,3,4 &#125;		//数组</span><br></pre></td></tr></table></figure></p>
-
+<p>更多复杂的表达方式可以写成数组或对象直接量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; x:1,y:2 &#125;		//对象</span><br><span class="line">&#123; 1,2,3,4 &#125;		//数组</span><br></pre></td></tr></table></figure></p>
+<h2 id="标识符和保留字"><a href="#标识符和保留字" class="headerlink" title="标识符和保留字"></a>标识符和保留字</h2><pre><code>1、标识符就是一个名字。在JS中，标识符用来对变量和函数进行命名，或者用作JS代码中某些循环语句中的跳转位置的标记。
+2、JS标识符必须以字母、下划线（_）或美元符（$）开始。后续字符可以是字母、数字、下划线或美元符（数字是不允许作为首字符出现的，以便JavaScript可以轻易区分开标识符和数字）。
+3、出于移植性和易于书写的考虑，通常只使用ASCII字母和数字来书写标识符。然而需要注意的是，JS允许标识符中出现Unicode字符全集中的字母和数字。
+合法的标识符：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i</span><br><span class="line">my_varible_name</span><br><span class="line">v13</span><br><span class="line">_dummy</span><br><span class="line">$str</span><br><span class="line">var si = true;</span><br><span class="line">var π = 3.14;</span><br></pre></td></tr></table></figure>
+<pre><code>4、JS把一些标识符拿出来做自己的关键字，因此不能再在程序中把这些关键字用作标识符。
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/17/dayone/" data-id="cjtd0oh5z0000d8utbquk8tyl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/17/dayone/" data-id="cjtd1gwc8000150ut4n15va8r" class="article-share-link">Share</a>
       
       
     </footer>
