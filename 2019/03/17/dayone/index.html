@@ -7,17 +7,17 @@
   
   <title>dayone | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符`\u0020`，还可以识">
+  <meta name="description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符(\u0020)，还可以识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dayone">
 <meta property="og:url" content="http://yoursite.com/2019/03/17/dayone/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符`\u0020`，还可以识">
+<meta property="og:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符(\u0020)，还可以识">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T12:17:45.513Z">
+<meta property="og:updated_time" content="2019-03-17T14:28:42.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dayone">
-<meta name="twitter:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符`\u0020`，还可以识">
+<meta name="twitter:description" content="词法结构1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。 空格、换行符和格式控制符1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。 2、JS可以识别普通的空格符(\u0020)，还可以识">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -88,14 +88,21 @@
       
         <h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a>词法结构</h2><pre><code>1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。
 2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。
-</code></pre><h3 id="空格、换行符和格式控制符"><a href="#空格、换行符和格式控制符" class="headerlink" title="空格、换行符和格式控制符"></a>空格、换行符和格式控制符</h3><pre><code>1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。
-2、JS可以识别普通的空格符`\u0020`，还可以识别如下表示空格的字符：水平制表符`\u0009`、垂直制表符`\u000B`、换页符`u000C`、不中断空白`\u00A0`、字节序标记`\uFEFF`，以及在Unicode中所有Zs类别的字符。
-3、JS将如下字符识别为行结束符：换行符`\u000A`、回车符`\u000D`、行分隔符`\u2028`、段分隔符`\u2029`。回车符加换行符在一起被解析为一个单行结束符。
-</code></pre>
+</code></pre><h4 id="空格、换行符和格式控制符"><a href="#空格、换行符和格式控制符" class="headerlink" title="空格、换行符和格式控制符"></a>空格、换行符和格式控制符</h4><pre><code>1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。
+2、JS可以识别普通的空格符(\u0020)，还可以识别如下表示空格的字符：水平制表符(\u0009)、垂直制表符(\u000B)、换页符(u000C)、不中断空白(\u00A0)、字节序标记(\uFEFF)，以及在Unicode中所有Zs类别的字符。
+3、JS将如下字符识别为行结束符：换行符(\u000A)、回车符(\u000D)、行分隔符(\u2028)、段分隔符(\u2029)。回车符加换行符在一起被解析为一个单行结束符。
+4、Unicode格式控制字符（Cf类），比如“从右至左书写标记”(\u200F)和“从左至右书写标记”(\u200E),控制着文本的视觉显示，这对于一些非英语文本的正确显示来说是至关重要的，这些字符可用在JavaScript的注释、字符串直接量和正则表达式直接量中，但不能用在标识符（比如，变量名）中。但有个例外，零宽连接符(\u200D)和零宽非连接符(\uFEFF)是可以出现在标识符中的，但不能作为标识符的首字母。上文也提到了字节序标记格式控制符(\uFEFF)被当成了空格来对待。
+</code></pre><h4 id="Unicode转义序列"><a href="#Unicode转义序列" class="headerlink" title="Unicode转义序列"></a>Unicode转义序列</h4><pre><code>1、JavaScript定义了一种特殊序列，使用6个ASCII字符来代表任意16位Unicode内码。这些Unicode转义序列均以\u为函数，其后跟随4个十六进制数（使用数字以及大写或小写的字母A~F表示）。这种Unicode转义写法可以用在JS字符串直接量、正则表达式直接量和标识符中（关键字除外）。
+2、Unicode转义写法也可以出现在注释中，但由于JS会将注释忽略，它们只是被当成上下文中的ASCII字符处理而且并不会被解析为其对应的Unicode字符。
+</code></pre><h3 id="直接量"><a href="#直接量" class="headerlink" title="直接量"></a>直接量</h3><pre><code>所谓直接量就是程序中直接使用的数据值。
+下面列出的都是直接量：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">12		//数字</span><br><span class="line">1.2		//小数</span><br><span class="line">&quot;hello world&quot;	//字符串文本</span><br><span class="line">&apos;Hi&apos;		//另一个字符串</span><br><span class="line">true		//布尔值</span><br><span class="line">false		//另一个布尔值</span><br><span class="line">/javascript/gi		//正则表达式直接量（用作模式匹配)</span><br><span class="line">null		//空</span><br></pre></td></tr></table></figure>
+<p>#####更多复杂的表达方式可以写成数组或对象直接量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; x:1,y:2 &#125;		//对象</span><br><span class="line">&#123; 1,2,3,4 &#125;		//数组</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/17/dayone/" data-id="cjtcw3i130001mwuts21u7haf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/17/dayone/" data-id="cjtd0oh5z0000d8utbquk8tyl" class="article-share-link">Share</a>
       
       
     </footer>
