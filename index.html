@@ -88,7 +88,55 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/18/loancalculator/" data-id="cjtdte6po00042gutlryjj6fv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/18/loancalculator/" data-id="cjtdwchn80005osut5mldfzpw" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-dayone" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/17/dayone/" class="article-date">
+  <time datetime="2019-03-17T11:55:05.000Z" itemprop="datePublished">2019-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/17/dayone/">dayone</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a>词法结构</h2><p>1、JavaScript是区分大小写的语言。HTML是不区分大小写的（尽管XHTML区分大小写）。<br>2、JavaScript程序是用Unicode字符集编写的。ECMAScript 5要求JavaScript支持Unicode 3及后续版本。</p>
+<h4 id="空格、换行符和格式控制符"><a href="#空格、换行符和格式控制符" class="headerlink" title="空格、换行符和格式控制符"></a>空格、换行符和格式控制符</h4><p>1、JS会忽略程序中标识之间的空格，多数情况下JS同样会忽略换行符。<br>2、JS可以识别普通的空格符(\u0020)，还可以识别如下表示空格的字符：水平制表符(\u0009)、垂直制表符(\u000B)、换页符(u000C)、不中断空白(\u00A0)、字节序标记(\uFEFF)，以及在Unicode中所有Zs类别的字符。<br>3、JS将如下字符识别为行结束符：换行符(\u000A)、回车符(\u000D)、行分隔符(\u2028)、段分隔符(\u2029)。回车符加换行符在一起被解析为一个单行结束符。<br>4、Unicode格式控制字符（Cf类），比如“从右至左书写标记”(\u200F)和“从左至右书写标记”(\u200E),控制着文本的视觉显示，这对于一些非英语文本的正确显示来说是至关重要的，这些字符可用在JavaScript的注释、字符串直接量和正则表达式直接量中，但不能用在标识符（比如，变量名）中。但有个例外，零宽连接符(\u200D)和零宽非连接符(\uFEFF)是可以出现在标识符中的，但不能作为标识符的首字母。上文也提到了字节序标记格式控制符(\uFEFF)被当成了空格来对待。</p>
+<h4 id="Unicode转义序列"><a href="#Unicode转义序列" class="headerlink" title="Unicode转义序列"></a>Unicode转义序列</h4><p>1、JavaScript定义了一种特殊序列，使用6个ASCII字符来代表任意16位Unicode内码。这些Unicode转义序列均以\u为函数，其后跟随4个十六进制数（使用数字以及大写或小写的字母A~F表示）。这种Unicode转义写法可以用在JS字符串直接量、正则表达式直接量和标识符中（关键字除外）。<br>2、Unicode转义写法也可以出现在注释中，但由于JS会将注释忽略，它们只是被当成上下文中的ASCII字符处理而且并不会被解析为其对应的Unicode字符。</p>
+<h3 id="直接量"><a href="#直接量" class="headerlink" title="直接量"></a>直接量</h3><p>所谓直接量就是程序中直接使用的数据值。<br>下面列出的都是直接量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">12		//数字</span><br><span class="line">1.2		//小数</span><br><span class="line">&quot;hello world&quot;	//字符串文本</span><br><span class="line">&apos;Hi&apos;		//另一个字符串</span><br><span class="line">true		//布尔值</span><br><span class="line">false		//另一个布尔值</span><br><span class="line">/javascript/gi		//正则表达式直接量（用作模式匹配)</span><br><span class="line">null		//空</span><br></pre></td></tr></table></figure></p>
+<p>更多复杂的表达方式可以写成数组或对象直接量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; x:1,y:2 &#125;		//对象</span><br><span class="line">&#123; 1,2,3,4 &#125;		//数组</span><br></pre></td></tr></table></figure></p>
+<h2 id="标识符和保留字"><a href="#标识符和保留字" class="headerlink" title="标识符和保留字"></a>标识符和保留字</h2><p>1、标识符就是一个名字。在JS中，标识符用来对变量和函数进行命名，或者用作JS代码中某些循环语句中的跳转位置的标记。<br>2、JS标识符必须以字母、下划线（_）或美元符（$）开始。后续字符可以是字母、数字、下划线或美元符（数字是不允许作为首字符出现的，以便JavaScript可以轻易区分开标识符和数字）。<br>3、出于移植性和易于书写的考虑，通常只使用ASCII字母和数字来书写标识符。然而需要注意的是，JS允许标识符中出现Unicode字符全集中的字母和数字。<br>    合法的标识符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i</span><br><span class="line">my_varible_name</span><br><span class="line">v13</span><br><span class="line">_dummy</span><br><span class="line">$str</span><br><span class="line">var si = true;</span><br><span class="line">var π = 3.14;</span><br></pre></td></tr></table></figure></p>
+<p>4、JS把一些标识符拿出来做自己的关键字，因此不能再在程序中把这些关键字用作标识符。<br>5、JS的具体实现可能定义独有的全局变量和函数，每一种特定的JS运行环境（客户端，服务器端等）都有自己的一个全局列表属性。</p>
+<h2 id="可选的分号"><a href="#可选的分号" class="headerlink" title="可选的分号"></a>可选的分号</h2><p>1、在JS中，如果语句各自独占一行，通常可以省略语句之间的分号（程序结尾或右花括号”}”之前的分号也可以省略）。<br>2、JS并不是在所有换行处都填补分号：只有在缺少了分号就无法正确解析代码的时候，JS才会填补分号。<br>3、如果当前语句和小一行语句无法合并解析，JS则在第一行后填补分号，这是通用规则。但有两个例外 ：<br> （1）、在涉及return、break、continue语句的场景中。如果这三个关键字后紧跟着换行，JS则会在换行处填补分号。<br>  如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">return</span><br><span class="line">true;</span><br></pre></td></tr></table></figure></p>
+<p>  会被解释为 <code>return; true;</code><br>  这和本意<code>return true;</code>是不符的。<br>  即，在return、break和continue和随后的表达式之间不能有换行。<br>  （2）在涉及”++”、”–”运算符的时候。这些运算符可以作为后缀也可以作为前缀。如果做后缀它和表达式应该在同一行，否则行尾将填充分号，同时”++”、”–”将会作为下一行代码的前缀操作符并与之一起解析。<br>  如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x</span><br><span class="line">++</span><br><span class="line">y</span><br></pre></td></tr></table></figure></p>
+<p>  这段代码将会被解析为<code>x;++y;</code>，而不是<code>x++;y;</code>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/17/dayone/" data-id="cjtdwchm20000osuttjsba3p4" class="article-share-link">Share</a>
       
       
       
@@ -127,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/17/basicclientjs/" data-id="cjtdte6ou00002gut4h43v49n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/17/basicclientjs/" data-id="cjtdwchmj0004osut6jcoofv9" class="article-share-link">Share</a>
       
       
       
@@ -166,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/17/basicjscore/" data-id="cjtdte6p800012gut8d8hh07k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/17/basicjscore/" data-id="cjtdwchmi0003osutj6bs564n" class="article-share-link">Share</a>
       
       
       
@@ -206,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/16/newpapername/" data-id="cjtdte6pe00032gutercddt4h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/16/newpapername/" data-id="cjtdwchmg0002osutce1ikvzc" class="article-share-link">Share</a>
       
       
       
@@ -245,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/16/hello-world/" data-id="cjtdte6pb00022guty40vucpn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/16/hello-world/" data-id="cjtdwchmc0001osutcwi489fe" class="article-share-link">Share</a>
       
       
       
@@ -292,6 +340,10 @@
           </li>
         
           <li>
+            <a href="/2019/03/17/dayone/">dayone</a>
+          </li>
+        
+          <li>
             <a href="/2019/03/17/basicclientjs/">basicclientjs</a>
           </li>
         
@@ -301,10 +353,6 @@
         
           <li>
             <a href="/2019/03/16/newpapername/">First Steps</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/16/hello-world/">Hello World</a>
           </li>
         
       </ul>
