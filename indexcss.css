@@ -1,12 +1,12 @@
 @charset "utf-8";
 html,body{
   	  height: 100%;
-  	  color: #F0E68C;
+  	  color: #FFA07A;
   	  font-family: sans-serif;
   	}
 
 	body{
-  	  background:url('allimage/ac.jpg')  center center;	/*此处url(001tu.jpg)可直接改成black之类的*/
+  	  background:url('allimage/a.jpg')  center center;	/*此处url(001tu.jpg)可直接改成black之类的*/
   	  background-size: cover;
   	  margin: 0;
   	  padding: 0;
@@ -40,8 +40,8 @@ html,body{
 
   	a{
   		font-size: 18px;
-  		color: #F0E68C;
-  		border:1px solid #F0E68C;
+  		color: #FFA07A;
+  		border:1px solid #FFA07A;
   		border-radius: 3px;
   		padding:10px 100px; 
   		text-decoration: none;
