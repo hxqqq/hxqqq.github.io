@@ -39,10 +39,10 @@ html,body{
   	}
 
   	a{
-  		font-size: 18px;
-  		color: #FF7F50;
-  		border:1px solid #FF7F50;
-  		border-radius: 3px;
+  		font-size: 19px;
+  		color: #FF6347;
+  		border:2px solid #FF6347;
+  		border-radius: 4px;
   		padding:10px 100px; 
   		text-decoration: none;
   	}
