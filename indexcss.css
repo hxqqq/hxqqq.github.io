@@ -6,7 +6,7 @@ html,body{
   	}
 
 	body{
-  	  background:url('allimage/a.jpg')  center center;	/*此处url(001tu.jpg)可直接改成black之类的*/
+  	  background:url('allimage/ac.jpg')  center center;	/*此处url(001tu.jpg)可直接改成black之类的*/
   	  background-size: cover;
   	  margin: 0;
   	  padding: 0;
